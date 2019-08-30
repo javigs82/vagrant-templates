@@ -1,0 +1,5 @@
+---
+
+- src: git@github.com:javigs82/terraform-aws-bastion.git
+  scm: git
+  name: javigs82.terraform-aws-bastion

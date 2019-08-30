@@ -1,0 +1,4 @@
+FROM sonarqube
+LABEL maintainer="javigs82@gmail.com"
+
+RUN sed -i -e 's|^#sonar.web.context=|sonar.web.context=/sonar|' /opt/sonarqube/conf/sonar.properties

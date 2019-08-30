@@ -1,0 +1,43 @@
+version: '3'
+services:
+  sonarqube:
+    container_name: sonarqube 
+    build:
+      context: .
+      dockerfile: Dockerfile-sonarqube
+    ports:
+      - "9000:9000"
+    networks:
+      - sonarnet
+    environment:
+      - SONARQUBE_JDBC_URL=jdbc:postgresql://db:5432/sonar
+    volumes:
+      - sonar-home-volume:/opt/sonarqube/
+    restart: unless-stopped
+  db:
+    container_name: sonarqube-postgres
+    image: postgres
+    networks:
+      - sonarnet
+    environment:
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonar
+    volumes:
+      - postgres-home-volume:/var/lib/postgresql
+    restart: unless-stopped
+
+networks:
+  sonarnet:
+    driver: bridge
+
+volumes:
+  sonar-home-volume:
+    driver_opts:
+      type: none
+      device: /data/sonarqube/sonarqube_home
+      o: bind
+  postgres-home-volume:
+    driver_opts:
+      type: none
+      device: /data/postgres/postgres_home
+      o: bind
