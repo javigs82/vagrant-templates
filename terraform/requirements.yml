@@ -1,5 +1,5 @@
 ---
 
-- src: git@github.com:javigs82/ansible-rol-terraform-bastion.git
-  scm: git
+- src: git@github.com:javigs82/ansible-role-terraform-bastion.git
+  scm: git  
   name: javigs82.terraform-bastion
