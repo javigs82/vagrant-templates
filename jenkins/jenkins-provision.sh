@@ -33,9 +33,10 @@ mkdir -p $JENKINS_LOG_HOST && \
 chown 1000 $JENKINS_LOG_HOST && \
 
 docker volume create --driver local --opt device=$JENKINS_HOME_HOST \
---opt o=bind jenkins-home-volume && \
+--opt o=bind --opt type=nfs jenkins-home-volume && \
 
-docker volume create --driver local --opt device=$JENKINS_LOG_HOST   \--opt o=bind jenkins-log-volume && \
+docker volume create --driver local --opt device=$JENKINS_LOG_HOST   \
+--opt o=bind --opt type=nfs jenkins-log-volume && \
 
 #run jenkins: docker.sock is to work with DosD
 docker run -it -d --restart unless-stopped --name jenkins-master -p 8080:8080  \

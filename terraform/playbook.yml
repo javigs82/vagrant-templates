@@ -2,5 +2,4 @@
   hosts: terraform
   become: yes
   roles:
-    - role: geerlingguy.ansible
     - role: javigs82.terraform-bastion

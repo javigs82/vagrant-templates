@@ -1,12 +1,12 @@
-FROM jenkins/jenkins:2.182-slim
-MAINTAINER javigs82 <javigs82@gmail.com>
+FROM jenkins/jenkins:2.197-slim
+LABEL maintainer="javigs82@gmail.com" 
 
 USER root
 
 # Default to UTF-8 file.encoding
 ENV LANG C.UTF-8
 
-ARG DOCKER_CLIENT=docker-18.09.7.tgz 
+ARG DOCKER_CLIENT=docker-19.03.2.tgz 
 
 # place docker client (DosD): nice approach
 RUN cd /tmp/ \

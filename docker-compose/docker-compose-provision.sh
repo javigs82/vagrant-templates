@@ -4,6 +4,7 @@
 ####Installing Docker & Docker Compose
 #########################################################
 apt-get update &&\
+apt-get upgrade --assume-yes &&\
 apt-get install --assume-yes \
      apt-transport-https \
      ca-certificates \
@@ -24,7 +25,7 @@ apt-get update && \
 
 apt-get install --assume-yes docker-ce && \
 
-echo 'Docker installed'
+echo "Docker installed"
 
 echo "downloading docker-compose"
 
@@ -32,4 +33,9 @@ curl -fsSL https://github.com/docker/compose/releases/download/1.19.0/docker-com
 
 chmod +x /usr/local/bin/docker-compose && \
 
-echo 'Docker Compose installed'
+echo 'Docker Compose installed' && \
+
+groupadd docker || echo "docker group already installed" && \
+usermod -aG docker vagrant && \
+
+echo "Added vagrant to docker group"
