@@ -23,6 +23,10 @@ COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
 #add user rights
-RUN groupadd --gid 999 docker && usermod -aG docker jenkins
+# RUN groupadd --gid 999 docker && usermod -aG docker jenkins
+# trick for vagrant which use vfbox as 999 and docker as 998
+RUN groupadd --gid 998 docker && usermod -aG docker jenkins
+
+
 
 USER jenkins
