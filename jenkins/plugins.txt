@@ -16,7 +16,7 @@ pipeline-github-lib:1.0
 durable-task:1.30
 workflow-durable-task-step:2.34
 matrix-auth:2.4.2
-ssh-credentials:1.17.2
+ssh-credentials:1.17.3
 timestamper:1.10
 branch-api:2.5.4
 token-macro:2.8
