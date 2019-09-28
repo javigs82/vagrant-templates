@@ -1,0 +1,6 @@
+- name: Ansible Bastion
+  hosts: '{{ host | default("ansibleVM") }}'
+  become: yes
+  roles:
+    - role: geerlingguy.repo-epel
+    - role: geerlingguy.ansible

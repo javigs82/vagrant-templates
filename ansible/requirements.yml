@@ -1,0 +1,4 @@
+---
+- src: git@github.com:geerlingguy/ansible-role-ansible.git
+  scm: git  
+  name: geerlingguy.ansible

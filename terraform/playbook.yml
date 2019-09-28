@@ -1,4 +1,4 @@
-- name: Ansible WebApp Test
+- name: Terraform Bastion
   hosts: '{{ host | default("terraform") }}'
   become: yes
   roles:
