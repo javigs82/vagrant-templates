@@ -1,5 +1,5 @@
 - name: Ansible WebApp Test
-  hosts: terraform
+  hosts: '{{ host | default("terraform") }}'
   become: yes
   roles:
     - role: javigs82.terraform-bastion
