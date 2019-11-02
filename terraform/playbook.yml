@@ -2,4 +2,4 @@
   hosts: '{{ host | default("terraform") }}'
   become: yes
   roles:
-    - role: javigs82.terraform-bastion
+    - role: javigs82.terraform
