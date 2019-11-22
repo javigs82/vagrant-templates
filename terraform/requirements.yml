@@ -1,2 +1,4 @@
 ---
+
 - src: javigs82.terraform
+  version: v1.1.0
