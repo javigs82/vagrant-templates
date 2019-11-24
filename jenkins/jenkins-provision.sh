@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#Define in vagrantfile to store Dockerfile
+#Define where Dockerfile and plugins txt
 TMP_JENKINS="/tmp/jenkins"
 cd $TMP_JENKINS
 

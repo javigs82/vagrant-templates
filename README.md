@@ -42,7 +42,18 @@ If this is your first time using Github, review http://help.github.com to learn 
 
 What things you need to install the software and how to install them
 * [VirtualBox](https://www.virtualbox.org/)
-* [Vagrant](https://www.jetbrains.com/idea/)
+* [Vagrant](https://www.vagrantup.com/downloads.html)
+
+In order to work with virtual box and vagrant plugings, 
+install following packages in your os.
+
+Note this is an exapmple for debian/ubuntu:
+
+```
+
+sudo apt-get install linux-headers-$(uname -r) build-essential dkms 
+
+```
 
 ## Jenkins
 
