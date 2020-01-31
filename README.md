@@ -13,7 +13,7 @@
  - RabbitMq: Installation over [Debian](https://www.rabbitmq.com/install-debian.html)
  - MacOS- Sierra: Sierra macOS vagrant machine with GUI enabled.
  - **Terraform** (centos/7): installed via ansible role.
- - **Ansible** (centos/7): installed via ansible role.
+ - **Ansible** (debian/buster64): installed via ansible role.
 
  **Note-1:** Most of them work via vagrant port_fordwarding option.  
  **Note-2:** Most of them need docker installed, so Vagrantfiles are provisioned with docker-composed as first provisioner like
