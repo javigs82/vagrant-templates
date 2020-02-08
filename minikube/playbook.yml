@@ -1,0 +1,10 @@
+- name: Terraform Bastion
+  hosts: '{{ host | default("minikube") }}'
+  become: yes
+  vars:
+   - minikube_version: '1.1.0'
+   - kubectl_version: '1.14.0'
+  roles:
+    - role: geerlingguy.docker
+    - role: gantsign.minikube
+    - role: javigs82.terraform

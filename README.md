@@ -14,6 +14,7 @@
  - MacOS- Sierra: Sierra macOS vagrant machine with GUI enabled.
  - **Terraform** (centos/7): installed via ansible role.
  - **Ansible** (centos/7): installed via ansible role.
+ - **Minikube** (debian/jessie64)): installed via ansible role. Contains kubectl also.
 
  **Note-1:** Most of them work via vagrant port_fordwarding option.  
  **Note-2:** Most of them need docker installed, so Vagrantfiles are provisioned with docker-composed as first provisioner like
@@ -64,6 +65,30 @@ Jenkins.instance.pluginManager.plugins.each{
   plugin -> 
     println ("${plugin.getShortName()}:${plugin.getVersion()}")
 }
+
+```
+
+## Minikube
+
+In order to work with minikube in vagrant `vm-driver=none`
+Please heck following link [https://minikube.sigs.k8s.io/docs/start/linux/](https://minikube.sigs.k8s.io/docs/start/linux/)
+
+### Usage
+
+The none driver requires minikube to be run as root, until #3760 can be addressed.
+
+```
+
+sudo minikube start --vm-driver=none
+
+```
+
+To make none the default driver:
+
+```
+
+sudo minikube config set vm-driver none
+
 
 ```
 
