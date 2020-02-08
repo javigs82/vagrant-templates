@@ -99,3 +99,12 @@ sudo minikube config set vm-driver none
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details
+
+sudo yum install docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine

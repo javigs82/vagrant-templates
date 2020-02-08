@@ -4,7 +4,6 @@
   version: v1.1.0
 
 - src: gantsign.minikube
-  version: 1.14.1
 
 - src: geerlingguy.docker
   version: 2.6.0
