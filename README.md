@@ -5,13 +5,13 @@
 ## Utilities
 
  - **Docker Compose** (ubuntu/bionic64): Virtual machine with docker & docker compose installed. The provision script is also used in other machines.
- - MongoDB: MongoDB 4.0.x installation running in debian/stretch64.
- - MySql: Mysql5.7 installation over centos7
+ - **MongoDB**: MongoDB 4.0.x installation running in debian/stretch64.
+ - **MySql**: Mysql5.7 installation over centos7
  - **Jenkins** (ubuntu/bionic64): Jenkins slim running in docker under debian/buster64.
- - Sonarqube:  Sonarqube installation on docker in a vagrant machine. It also install PostgreSQL in other docker container while orchestration is done via docker-compose.
- - Nexus3:  Nexus3 installation on docker in a vagrant machine running in debian/stretch64.
- - RabbitMq: Installation over [Debian](https://www.rabbitmq.com/install-debian.html)
- - MacOS- Sierra: Sierra macOS vagrant machine with GUI enabled.
+ - **Sonarqube**:  Sonarqube installation on docker in a vagrant machine. It also install PostgreSQL in other docker container while orchestration is done via docker-compose.
+ - **Nexus3**:  Nexus3 installation on docker in a vagrant machine running in debian/stretch64.
+ - **RabbitMq**: Installation over [Debian](https://www.rabbitmq.com/install-debian.html)
+ - **MacOS-Sierra**: Sierra macOS vagrant machine with GUI enabled.
  - **Terraform** (centos/7): installed via ansible role.
  - **Ansible** (centos/7): installed via ansible role.
  - **Minikube** (debian/jessie64)): installed via ansible role. Contains kubectl also.
